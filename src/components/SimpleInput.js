@@ -18,10 +18,7 @@ const SimpleInput = (props) => {
     inputBlurHandler: emailBlurHandler,
     reset: resetEmailInput,
   } = useInput(
-    (value) =>
-      enteredEmail.trim() !== "" &&
-      enteredEmail.includes("@") &&
-      enteredEmail.includes(".")
+    (value) => value.trim() !== "" && value.includes("@") && value.includes(".")
   );
 
   let formIsValid = false;
